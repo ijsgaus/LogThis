@@ -8,7 +8,7 @@ namespace WalnutBrain.LogThis.NLog
     {
         public ILogger GetLogger(object target)
         {
-            if (target == null) throw new ArgumentNullException("logItem");
+            if (target == null) throw new ArgumentNullException(nameof(target));
             string loggerName;
             if (target is string)
                 loggerName = target.ToString();
